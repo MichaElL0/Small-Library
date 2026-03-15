@@ -4,6 +4,13 @@
     margin: 0;
     line-height: 1.5;
     font-family: monospace;
+
+    --white: #FFF8F0;
+    --light-brown: #C08552;
+    --medium-brown: #8C5A3C;
+    --bold-brown: #4B2E2B;
+
+    font-family: "Lexend", monospace;
 }
 
 img, picture, video, canvas, svg {
@@ -21,26 +28,39 @@ p, h1, h2, h3, h4, h5, h6 {
 
 body {
     min-height: 100vh;
+    background-color: var(--white);
 }
 
 body h1 {
     text-align: center;
     margin: 1rem;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    font-style: italic;
 }
 
 .books-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     padding: 1rem;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .book-card {
     border: 1px solid red;
+    background-color: var(--light-brown);
     padding: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    min-height: 150px;
+    min-height: 250px;
+    border-radius: 20px;
+    -webkit-box-shadow: 6px 6px 0px 0px rgba(140, 90, 60, 1);
+    -moz-box-shadow: 6px 6px 0px 0px rgba(140, 90, 60, 1);
+    box-shadow: 6px 6px 0px 0px rgba(140, 90, 60, 1);
+}
+
+.book-card:hover {
+    box-shadow: none;
 }
