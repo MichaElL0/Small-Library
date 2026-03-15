@@ -13,11 +13,25 @@ function Book(title, author, pages, read) {
 }
 
 function addBookToLibrary(title, author, pages, read) {
-  const book = new Book(title, author, pages, read);
-  myLibrary.push(book);
+    const book = new Book(title, author, pages, read);
+    myLibrary.push(book);
 }
 
-addBookToLibrary("1984", "George Orwell", 384, "not read");
+addBookToLibrary("1984", "George Orwell", 384, "read");
+addBookToLibrary("Steve Jobs", "Walter Isaacson", 700, "read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
 
-console.log(myLibrary[0]);
-console.log(myLibrary[0].info())
+function displayBooks() {
+    const booksContainer = document.querySelector(".books-container");
+
+    myLibrary.forEach(book => {
+        const card = document.createElement("div");
+        card.classList.add("book-card");
+
+        card.textContent = `${book.title} by ${book.author}`;
+
+        booksContainer.appendChild(card);
+    });
+}
+
+displayBooks();
