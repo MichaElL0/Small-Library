@@ -20,6 +20,31 @@ function addBookToLibrary(title, author, pages, read) {
 addBookToLibrary("1984", "George Orwell", 384, "read");
 addBookToLibrary("Steve Jobs", "Walter Isaacson", 700, "read");
 addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
 
 function displayBooks() {
     const booksContainer = document.querySelector(".books-container");

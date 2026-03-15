@@ -25,10 +25,22 @@ body {
 
 body h1 {
     text-align: center;
+    margin: 1rem;
+}
+
+.books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 1rem;
+    gap: 1rem;
 }
 
 .book-card {
     border: 1px solid red;
     padding: 1rem;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
 }
