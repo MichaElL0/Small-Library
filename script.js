@@ -1,3 +1,13 @@
+const addBookButton = document.querySelector("#bookAdd");
+const body = document.querySelector("body");
+
+addBookButton.addEventListener("click", (e) => {
+    console.log("Add book");
+    body.classList.add("dim-bg");
+    //Dim the background and disable interactions
+    //Display form box
+});
+
 const myLibrary = [];
 
 function Book(title, author, pages, read) {

@@ -104,3 +104,8 @@ footer {
     background-color: var(--rose);
     margin-top: 1rem;
 }
+
+.dim-bg {
+    filter: blur(2px);
+    pointer-events: none;
+}
