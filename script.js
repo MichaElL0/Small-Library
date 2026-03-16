@@ -27,24 +27,7 @@ addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
 addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
 addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
 addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+
 
 function displayBooks() {
     const booksContainer = document.querySelector(".books-container");

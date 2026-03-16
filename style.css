@@ -6,9 +6,14 @@
     font-family: monospace;
 
     --white: #FFF8F0;
-    --light-brown: #C08552;
-    --medium-brown: #8C5A3C;
-    --bold-brown: #4B2E2B;
+    --blue: #355070;
+    --darker-blue: #233549;
+    --lavend: #6d597a;
+    --rose: #b56576;
+    --coral: #e56b6f;
+    --darker-bronze: #e88c7d;
+    --bronze: #eaac8b;
+    --light-bronze: #ECB496;
 
     font-family: "Lexend", monospace;
 }
@@ -29,17 +34,29 @@ p, h1, h2, h3, h4, h5, h6 {
 body {
     min-height: 100vh;
     background-color: var(--white);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
+
 
 body h1 {
     text-align: center;
-    margin: 1rem;
+    margin-bottom: 1.5rem;
     font-size: 2.5rem;
     letter-spacing: 3px;
     font-style: italic;
+    background-color: var(--rose);
+    color: var(--white);
+}
+
+main {
+    flex: 1;
 }
 
 .books-container {
+    width: 75%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     padding: 1rem;
@@ -47,8 +64,7 @@ body h1 {
 }
 
 .book-card {
-    border: 1px solid red;
-    background-color: var(--light-brown);
+    background-color: var(--bronze);
     padding: 1rem;
     display: flex;
     flex-direction: row;
@@ -56,11 +72,35 @@ body h1 {
     align-items: center;
     min-height: 250px;
     border-radius: 20px;
-    -webkit-box-shadow: 6px 6px 0px 0px rgba(140, 90, 60, 1);
-    -moz-box-shadow: 6px 6px 0px 0px rgba(140, 90, 60, 1);
-    box-shadow: 6px 6px 0px 0px rgba(140, 90, 60, 1);
+    -webkit-box-shadow: 6px 6px 0px 0px var(--darker-bronze);
+    -moz-box-shadow: 6px 6px 0px 0px var(--darker-bronze);
+    box-shadow: 6px 6px 0px 0px var(--darker-bronze);
 }
 
 .book-card:hover {
     box-shadow: none;
+}
+
+#bookAdd {
+    padding: 0.7rem 2rem;
+    margin: 1rem;
+    font-size: 1.3rem;
+    border-radius: 20px;
+    border-style: none;
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+#bookAdd:hover {
+    -webkit-box-shadow: 6px 6px 0px 0px var(--darker-blue);
+    -moz-box-shadow: 6px 6px 0px 0px var(--darker-blue);
+    box-shadow: 6px 6px 0px 0px var(--darker-blue);
+    font-size: 1.33rem;
+    cursor: pointer;
+}
+
+footer {
+    padding: 1rem;
+    background-color: var(--rose);
+    margin-top: 1rem;
 }
