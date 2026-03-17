@@ -2,6 +2,7 @@ const addBookButton = document.querySelector("#bookAdd");
 const body = document.querySelector("body");
 const overlay = document.querySelector(".overlay");
 const modal = document.querySelector(".modal");
+const form = document.querySelector(".book-form");
 
 addBookButton.addEventListener("click", e => {
     console.log("Add book");
@@ -14,6 +15,12 @@ overlay.addEventListener("click", e => {
     modal.classList.add("hidden");
 });
 
+form.addEventListener("click", e => {
+    e.preventDefault();
+
+    console.log("Add book in form");
+});
+
 const myLibrary = [];
 
 function Book(title, author, pages, read) {
@@ -24,7 +31,7 @@ function Book(title, author, pages, read) {
     this.id = crypto.randomUUID();
 
     this.info = function() {
-        return (`${this.title} by ${this.author}, ${pages}, ${this.read} with ID of ${this.id}`);
+        return (`${this.title} by ${this.author}, ${this.pages}, ${this.read} with ID of ${this.id}`);
     }
 }
 
@@ -47,6 +54,8 @@ addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
 
 function displayBooks() {
     const booksContainer = document.querySelector(".books-container");
+
+    booksContainer.innerHTML = "";
 
     myLibrary.forEach(book => {
         const card = document.createElement("div");
