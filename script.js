@@ -1,11 +1,17 @@
 const addBookButton = document.querySelector("#bookAdd");
 const body = document.querySelector("body");
+const overlay = document.querySelector(".overlay");
+const modal = document.querySelector(".modal");
 
-addBookButton.addEventListener("click", (e) => {
+addBookButton.addEventListener("click", e => {
     console.log("Add book");
-    body.classList.add("dim-bg");
-    //Dim the background and disable interactions
-    //Display form box
+    overlay.classList.remove("hidden");
+    modal.classList.remove("hidden");
+});
+
+overlay.addEventListener("click", e => {
+    overlay.classList.add("hidden");
+    modal.classList.add("hidden");
 });
 
 const myLibrary = [];

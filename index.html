@@ -24,6 +24,25 @@
     <footer>
         Made by Michał.
     </footer>
+
+    <div class="overlay hidden"></div>
+
+    <div class="modal hidden">
+        <form class="book-form">
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" required minlength="2" maxlength="40">
+    
+            <label for="author">Author:</label>
+            <input type="text" name="author" id="author" required minlength="2" maxlength="40">
+    
+            <label for="pages">Number of pages:</label>
+            <input type="number" name="pages" id="pages" required min="1">
+    
+            <label for="title">Have you read it:</label>
+            <input type="text" name="read" id="read" required pattern="^(read|not read|Read|Not read|Not Read)$">
+        </form>
+
+    </div>
     
     <script src="script.js"></script>
 </body>

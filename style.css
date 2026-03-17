@@ -105,7 +105,29 @@ footer {
     margin-top: 1rem;
 }
 
-.dim-bg {
-    filter: blur(2px);
-    pointer-events: none;
+.overlay {
+    position: fixed;
+    inset: 0; 
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(3px);
+    z-index: 10;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 20px;
+    z-index: 20;
+}
+
+.hidden {
+    display: none;
+}
+
+input:user-invalid {
+    outline: 1px solid red;
 }
