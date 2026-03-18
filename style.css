@@ -140,6 +140,11 @@ input {
     border-style: none;
 }
 
+input:focus {
+    outline: none;
+    outline: 3px solid var(--darkest-blue);
+}
+
 .input-container {
     display: flex;
     gap: 0.3rem;
