@@ -8,6 +8,7 @@
     --white: #FFF8F0;
     --blue: #355070;
     --darker-blue: #233549;
+    --darkest-blue: #172230;
     --lavend: #6d597a;
     --rose: #b56576;
     --coral: #e56b6f;
@@ -89,13 +90,14 @@ main {
     border-style: none;
     background-color: var(--blue);
     color: var(--white);
+    transition: background-color 0.2s, transform 0.1s;
 }
 
 #bookAdd:hover {
     -webkit-box-shadow: 6px 6px 0px 0px var(--darker-blue);
     -moz-box-shadow: 6px 6px 0px 0px var(--darker-blue);
     box-shadow: 6px 6px 0px 0px var(--darker-blue);
-    font-size: 1.33rem;
+    transform: scale(1.02);
     cursor: pointer;
 }
 
@@ -118,10 +120,11 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: var(--white);
+    background: var(--blue);
     padding: 2rem;
     border-radius: 20px;
     z-index: 20;
+    color: var(--white);
 }
 
 .hidden {
@@ -130,4 +133,41 @@ footer {
 
 input:user-invalid {
     outline: 1px solid red;
+}
+
+input {
+    border-radius: 5px;
+    border-style: none;
+}
+
+.input-container {
+    display: flex;
+    gap: 0.3rem;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.book-form {
+    padding: 1rem;
+}
+
+.book-form button {
+    padding: 0.5rem 3rem;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+    background-color: var(--darker-blue);
+    color: var(--white);
+    border-style: none;
+    border-radius: 20px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.book-form button:hover {
+    -webkit-box-shadow: 6px 6px 0px 0px var(--darkest-blue);
+    -moz-box-shadow: 6px 6px 0px 0px var(--darkest-blue);
+    box-shadow: 6px 6px 0px 0px var(--darkest-blue);
+    transform: scale(1.02);
 }
