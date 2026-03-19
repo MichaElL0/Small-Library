@@ -3,6 +3,7 @@ const body = document.querySelector("body");
 const overlay = document.querySelector(".overlay");
 const modal = document.querySelector(".modal");
 const form = document.querySelector(".book-form");
+const formButton = document.querySelector("#formButton");
 
 addBookButton.addEventListener("click", e => {
     console.log("Add book");
@@ -15,10 +16,20 @@ overlay.addEventListener("click", e => {
     modal.classList.add("hidden");
 });
 
-form.addEventListener("click", e => {
+formButton.addEventListener("click", e => {
     e.preventDefault();
 
-    console.log("Add book in form");
+    const formData = new FormData(form);
+
+    const data = Object.fromEntries(formData);
+
+    console.log(data);
+
+    addBookToLibrary(formData.get("title"), formData.get("author"), formData.get("pages"), formData.get("read"));
+    displayBooks();
+    form.reset();
+    overlay.classList.add("hidden");
+    modal.classList.add("hidden");
 });
 
 const myLibrary = [];
@@ -42,11 +53,6 @@ function addBookToLibrary(title, author, pages, read) {
 
 addBookToLibrary("1984", "George Orwell", 384, "read");
 addBookToLibrary("Steve Jobs", "Walter Isaacson", 700, "read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
 addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
 addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
 addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");

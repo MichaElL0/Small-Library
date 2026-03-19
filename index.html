@@ -44,12 +44,20 @@
                 <input type="number" name="pages" id="pages" required min="1">
             </div>
     
-            <div class="input-container">
+            <!-- <div class="input-container">
                 <label for="title">Have you read it:</label>
                 <input type="text" name="read" id="read" required pattern="^(read|not read|Read|Not read|Not Read)$">
+            </div> -->
+
+            <div class="input-container">
+                <label for="title">Have you read it:</label>
+                <select name="read" id="read">
+                    <option value="read">Read</option>
+                    <option value="not read">Not read</option>
+                </select>
             </div>
 
-            <button type="submit">Add</button>
+            <button type="submit" id="formButton">Add</button>
         </form>
 
     </div>
