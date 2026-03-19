@@ -67,7 +67,19 @@ function displayBooks() {
         const card = document.createElement("div");
         card.classList.add("book-card");
 
-        card.textContent = `${book.title} by ${book.author}`;
+        const title = document.createElement("h4");
+        title.textContent = `Title: ${book.title}`;
+
+        const author = document.createElement("h4");
+        author.textContent = `Author: ${book.author}`;
+
+        const pages = document.createElement("h4");
+        pages.textContent = `Pages: ${book.pages}`;
+
+        const read = document.createElement("h4");
+        read.textContent = `Read?: ${book.read}`;
+
+        card.append(title, author, pages, read);
 
         booksContainer.appendChild(card);
     });
