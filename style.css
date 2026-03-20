@@ -59,7 +59,7 @@ main {
     width: 75%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     padding: 1rem;
     gap: 1.5rem;
 }
@@ -90,6 +90,22 @@ main {
 
 .book-card:hover {
     box-shadow: none;
+    transform: scale(1.02);
+}
+
+.remove-button {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    border-radius: 20px;
+    border-style: none;
+    background-color: var(--blue);
+    color: var(--white);
+    transition: background-color 0.2s, transform 0.1s;
+    width: 40%;
+    align-self: center;
+}
+
+.remove-button:hover {
     transform: scale(1.02);
 }
 

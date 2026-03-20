@@ -56,6 +56,9 @@ addBookToLibrary("Steve Jobs", "Walter Isaacson", 700, "read");
 addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
 addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
 addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
 
 
 function displayBooks() {
@@ -77,9 +80,19 @@ function displayBooks() {
         pages.textContent = `Pages: ${book.pages}`;
 
         const read = document.createElement("h4");
-        read.textContent = `Read?: ${book.read}`;
+        read.textContent = `Read: ${book.read}`;
 
-        card.append(title, author, pages, read);
+        const removeBtn = document.createElement("button");
+        removeBtn.textContent = "Remove";
+        removeBtn.classList.add("remove-button");
+
+        removeBtn.addEventListener("click", e => {
+            const index = myLibrary.findIndex(b => b.id === book.id);
+            myLibrary.splice(index, 1);
+            displayBooks();
+        });
+
+        card.append(title, author, pages, read, removeBtn);
 
         booksContainer.appendChild(card);
     });
