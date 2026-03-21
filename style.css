@@ -105,7 +105,20 @@ main {
     align-self: center;
 }
 
-.remove-button:hover {
+.read-button {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    border-radius: 20px;
+    border-style: none;
+    background-color: var(--blue);
+    color: var(--white);
+    transition: background-color 0.2s, transform 0.1s;
+    width: 80%;
+    align-self: center;
+}
+
+.remove-button:hover,
+.read-button:hover {
     transform: scale(1.02);
 }
 
