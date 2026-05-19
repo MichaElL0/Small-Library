@@ -16,7 +16,7 @@ overlay.addEventListener("click", e => {
     modal.classList.add("hidden");
 });
 
-formButton.addEventListener("submit", e => {
+form.addEventListener("submit", e => {
     e.preventDefault();
 
     const formData = new FormData(form);
@@ -34,21 +34,40 @@ formButton.addEventListener("submit", e => {
 
 const myLibrary = [];
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.id = crypto.randomUUID();
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.id = crypto.randomUUID();
+    }
 
-    this.info = function() {
+    info() {
         return (`${this.title} by ${this.author}, ${this.pages}, ${this.read} with ID of ${this.id}`);
     }
+
+    toggleRead() {
+        this.read = !this.read;
+    }
+
 }
 
-Book.prototype.toggleRead = function() {
-    this.read = !this.read;
-};
+// function Book(title, author, pages, read) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.read = read;
+//     this.id = crypto.randomUUID();
+
+//     this.info = function() {
+//         return (`${this.title} by ${this.author}, ${this.pages}, ${this.read} with ID of ${this.id}`);
+//     }
+// }
+
+// Book.prototype.toggleRead = function() {
+//     this.read = !this.read;
+// };
 
 function addBookToLibrary(title, author, pages, read) {
     const book = new Book(title, author, pages, read);
@@ -58,11 +77,7 @@ function addBookToLibrary(title, author, pages, read) {
 addBookToLibrary("1984", "George Orwell", 384, "read");
 addBookToLibrary("Steve Jobs", "Walter Isaacson", 700, "read");
 addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
-addBookToLibrary("Courage to be disliked", "Kishimi Ichiro", 264, "not read");
+
 
 
 function displayBooks() {
