@@ -1,62 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-    <title>Small Library</title>
-</head>
-<body>
-    <main>
-        <h1>Small Library</h1>
-    
-        <button type="button" id="bookAdd">Add book</button>
-    
-        <div class="books-container">
-            
-        </div>
-    </main>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Small Library</title>
+	</head>
+	<body>
+		<main>
+			<h1>Small Library</h1>
 
-    <footer>
-        Made by Michał.
-    </footer>
+			<button type="button" id="bookAdd">Add book</button>
 
-    <div class="overlay hidden"></div>
+			<div class="books-container"></div>
+		</main>
 
-    <div class="modal hidden">
-        <form class="book-form">
-            <div class="input-container">
-                <label for="title">Title:</label>
-                <input type="text" name="title" id="title" required minlength="2" maxlength="40">
-            </div>
-    
-            <div class="input-container">
-                <label for="author">Author:</label>
-                <input type="text" name="author" id="author" required minlength="2" maxlength="40">
-            </div>
-    
-            <div class="input-container">
-                <label for="pages">Number of pages:</label>
-                <input type="number" name="pages" id="pages" required min="1">
-            </div>
-    
-            <div class="input-container">
-                <label for="title">Have you read it:</label>
-                <select name="read" id="read">
-                    <option value="read">Read</option>
-                    <option value="not read">Not read</option>
-                </select>
-            </div>
+		<footer>Made by Michał.</footer>
 
-            <button type="submit" id="formButton">Add</button>
-        </form>
+		<div class="overlay hidden"></div>
 
-    </div>
-    
-    <script src="script.js"></script>
-</body>
+		<div class="modal hidden">
+			<form class="book-form">
+				<div class="input-container">
+					<label for="title">Title:</label>
+					<input
+						type="text"
+						name="title"
+						id="title"
+						required
+						minlength="2"
+						maxlength="40"
+					/>
+				</div>
+
+				<div class="input-container">
+					<label for="author">Author:</label>
+					<input
+						type="text"
+						name="author"
+						id="author"
+						required
+						minlength="2"
+						maxlength="40"
+					/>
+				</div>
+
+				<div class="input-container">
+					<label for="pages">Number of pages:</label>
+					<input type="number" name="pages" id="pages" required min="1" />
+				</div>
+
+				<div class="input-container">
+					<label for="title">Have you read it:</label>
+					<select name="read" id="read">
+						<option value="read">Read</option>
+						<option value="not read">Not read</option>
+					</select>
+				</div>
+
+				<button type="submit" id="formButton">Add</button>
+			</form>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
 </html>

@@ -53,22 +53,6 @@ class Book {
 
 }
 
-// function Book(title, author, pages, read) {
-//     this.title = title;
-//     this.author = author;
-//     this.pages = pages;
-//     this.read = read;
-//     this.id = crypto.randomUUID();
-
-//     this.info = function() {
-//         return (`${this.title} by ${this.author}, ${this.pages}, ${this.read} with ID of ${this.id}`);
-//     }
-// }
-
-// Book.prototype.toggleRead = function() {
-//     this.read = !this.read;
-// };
-
 function addBookToLibrary(title, author, pages, read) {
     const book = new Book(title, author, pages, read);
     myLibrary.push(book);
@@ -127,3 +111,45 @@ function displayBooks() {
 }
 
 displayBooks();
+
+const title = document.querySelector("#title");
+const author = document.querySelector("#author");
+const pages = document.querySelector("#pages");
+
+title.addEventListener("blur", () => {
+    if(title.validity.tooShort) {
+        title.setCustomValidity("Title too short")
+        title.reportValidity();
+    }
+    else if(title.validity.tooLong) {
+        title.setCustomValidity("Title too long")
+        title.reportValidity();
+    }
+    else {
+        title.setCustomValidity("");
+    }
+});
+
+author.addEventListener("blur", () => {
+    if(author.validity.tooShort) {
+        author.setCustomValidity("Author too short")
+        author.reportValidity();
+    }
+    else if(title.validity.tooLong) {
+        author.setCustomValidity("Author too long")
+        author.reportValidity();
+    }
+    else {
+        author.setCustomValidity("");
+    }
+});
+
+pages.addEventListener("blur", () => {
+    if(author.validity.rangeUnderflow) {
+        pages.setCustomValidity("Pages number too small");
+        pages.reportValidity();
+    }
+    else {
+        pages.setCustomValidity("");
+    }
+});
